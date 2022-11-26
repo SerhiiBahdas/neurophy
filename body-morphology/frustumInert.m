@@ -3,6 +3,8 @@ function nI = frustumInert(nR1, nR2, nH, nM)
 %   cone, defined with respect to the reference frame with the origin 
 %   placed at the base of the frustum. 
 %
+%   nI = frustumInert(nR1, nR2, nH, nM)
+%
 %   The mathematical formulations, notations, and derivations can be 
 %   accessed through the following link: https://drive.google.com/file/d/1
 %   HVyCyX7EoZSMdfH6forwRxNf6-CP4Mux/view?usp=sharing
@@ -37,11 +39,7 @@ function nI = frustumInert(nR1, nR2, nH, nM)
 % 
 %   AUTHOR ================================================================
 %   
-%   S.Bahdasariants, NEL, WVU, sb0220@mix.wvu.edu
-%
-%   See also MAIN, SOLVEDYNAMICS, SIMSWING, EXTRACTMETA, SAVESIM,...
-%   GETSWING, RUNSIM, GETKIN, SCALEANTHRO, SETMECHANICS, PARAXT,...
-%   SETCIRCUM
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   =======================================================================
 

@@ -2,6 +2,8 @@ function [] = vecplot(basis, uPo, uP1, uP2, bCSplot)
     %VECPLOT Plots a vector between two points in the input basis 
     %   coordinates.
     %
+    %   vecplot(basis, uPo, uP1, uP2, bCSplot)
+    %
     %   INPUT =========================================================
     %
     %   basis (structure)
@@ -56,7 +58,7 @@ function [] = vecplot(basis, uPo, uP1, uP2, bCSplot)
     %
     %   AUTHORSHIP ===================================================
     %
-    %   Serhii Bahdasariants, sb0220@mix.wvu.edu, NEL, WVU
+    %   Serhii Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   ==============================================================
     

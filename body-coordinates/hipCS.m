@@ -48,7 +48,7 @@ function [i_L, j_L, k_L, i_R, j_R, k_R] = hipCS(fle, fme, uPh_L, uPh_R, uPk_L, u
     %
     %   AUTHOR =========================================================
     %
-    %   S.Bahdasariants, NEL, WVU
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   ================================================================
 

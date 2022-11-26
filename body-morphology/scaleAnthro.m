@@ -2,6 +2,9 @@ function [nLength, nDim1, nDim2, nMass, nCOM, nInertiaMom,...
     nIntertiaProd, nVec] = scaleAnthro(nHeight, nWeight, nAge, sSex)
     %SCALEANTHRO Creates a structure containing subject's anthropometry. 
     %
+    %   [nLength, nDim1, nDim2, nMass, nCOM, nInertiaMom,...
+    %     nIntertiaProd, nVec] = scaleAnthro(nHeight, nWeight, nAge, sSex)
+    %
     %   INPUT==============================================================
     %
     %   nHeight (double)
@@ -49,11 +52,7 @@ function [nLength, nDim1, nDim2, nMass, nCOM, nInertiaMom,...
     %
     %   AUTHOR ============================================================
     %   
-    %   S.Bahdasariants, NEL, WVU, sb0220@mix.wvu.edu
-    %
-    %   See also MAIN, SOLVEDYNAMICS, SIMSWING, EXTRACTMETA, SAVESIM,...
-    %   GETSWING, RUNSIM, SETCIRCUM, GETKIN, SETMECHANICS, PARAXT,...
-    %   FRUSTUMINERT
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   LITERATURE ========================================================
     %    

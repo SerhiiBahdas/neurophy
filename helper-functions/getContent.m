@@ -2,6 +2,8 @@ function sFileList = getContent(sDir,varargin)
 %GETCONTENT Lists all folders and/or files in the specified directory. The
 %   extension of the files can be specified. 
 %
+%   sFileList = getContent(sDir,varargin)
+%
 %   INPUT ===========================================================
 %
 %   sDir (string)
@@ -33,7 +35,7 @@ function sFileList = getContent(sDir,varargin)
 %
 %   AUTHOR ==========================================================
 %
-%   S.Bahdasariants, NEL, WVU, sb0220@mix.wvu
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   =================================================================
 

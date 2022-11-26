@@ -41,7 +41,7 @@ function [i_L, j_L, k_L, i_R, j_R, k_R] = kneeCS(uPa_L, uPa_R, uPk_L, uPk_R, Med
     %
     %   AUTHOR =========================================================
     %
-    %   S.Bahdasariants, NEL, WVU
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   ================================================================
 

@@ -1,7 +1,9 @@
 function Y = splineint(X,tOld, tNew)
     %SPLINEINT Resamples signal X on time tNew.
     %
-    %   INPUT--------------------------------------------------------------
+    %   Y = splineint(X,tOld, tNew)
+    %
+    %   INPUT =============================================================
     %   
     %   x (numeric array)
     %   Input signal to be resampled. 
@@ -15,16 +17,16 @@ function Y = splineint(X,tOld, tNew)
     %   Time vector on which signal needs to be interpolated. 
     %   Example: [0, 0.5, 1, 1.5, 2]
     %
-    %   OUTPUT-------------------------------------------------------------
+    %   OUTPUT ============================================================
     %   
     %   X (numeric array)
     %   Resampled signal.
     %
-    %   AUTHOR ------------------------------------------------------------
+    %   AUTHOR ============================================================
     %
-    %   S.Bahdasariants, NEL, WVU, sb0220@mix.wvu.edu
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
-    %   -------------------------------------------------------------------
+    %   ===================================================================
     
     
     % Determine the size of the input matrix (rows and columns). The 

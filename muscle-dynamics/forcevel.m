@@ -1,6 +1,6 @@
 function nF = forcevel(nV, varargin)
 %FORCEVEL Force-velocity relationship describes the dependence of the
-%maximum isometric force output on the speed of muscle contraction. 
+% maximum isometric force output on the speed of muscle contraction. 
 %
 %   nF = forcevel(nV)
 %   nF = forcevel(nV, 'sMethod', 'Yakovenko')
@@ -53,7 +53,7 @@ function nF = forcevel(nV, varargin)
 %
 %   AUTHOR ================================================================
 %   
-%   S.Bahdasariants, NEL, WVU, seba-neuraxis@proton.me
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   =======================================================================
 

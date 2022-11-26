@@ -23,7 +23,7 @@ function nSig = phaseshift(nSig, nTol)
 %
 %   AUTHOR =========================================================
 %
-%   S.Bahdasariants, NEL, WVU
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   ================================================================
 

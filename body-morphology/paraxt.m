@@ -1,6 +1,8 @@
 function nJ = paraxt(nI, nVec, nM)
 %PARAXT Parallel axis theorem. 
 %
+%   nJ = paraxt(nI, nVec, nM)
+%
 %   INPUT =================================================================
 %   
 %   nI (numeric array)
@@ -29,11 +31,7 @@ function nJ = paraxt(nI, nVec, nM)
 %   
 %   AUTHOR ================================================================
 %   
-%   S.Bahdasariants, NEL, WVU, sb0220@mix.wvu.edu
-%
-%   See also MAIN, SOLVEDYNAMICS, SIMSWING, EXTRACTMETA, SAVESIM,...
-%   GETSWING, RUNSIM, GETKIN, SCALEANTHRO, SETMECHANICS, FRUSTUMINERT,...
-%   SETCIRCUM
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   =======================================================================
 

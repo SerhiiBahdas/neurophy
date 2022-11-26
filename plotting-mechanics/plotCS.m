@@ -23,7 +23,7 @@ function [] = plotCS(O,X,Y,Z)
 %
 %   AUTHOR =========================================================
 %
-%   S.Bahdasariants, NEL, WVU
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   ================================================================
 

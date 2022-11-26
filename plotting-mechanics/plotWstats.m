@@ -3,6 +3,8 @@ function [nMean, nSTD] = plotWstats(nSig, sColor)
 %positive and negative standart deviations. The area between the standart
 %deviations is shaded automatically. 
 %
+%   plotWstats(nSig, sColor)
+%
 %   INPUT =================================================================
 %
 %   nSig (numeric 2-D array)
@@ -23,7 +25,7 @@ function [nMean, nSTD] = plotWstats(nSig, sColor)
 %
 %   AUTHOR ================================================================
 %   
-%   S.Bahdasariants, NEL, WVU, sb0220@mix.wvu.edu
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   =======================================================================
 

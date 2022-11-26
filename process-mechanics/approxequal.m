@@ -25,7 +25,7 @@ function bEqual = approxequal(nVal1, nVal2, nTol)
 %
 %   AUTHOR =========================================================
 %
-%   S.Bahdasariants, NEL, WVU
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   ================================================================
 

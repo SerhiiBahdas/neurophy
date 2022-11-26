@@ -2,6 +2,8 @@ function [yRot, xRot, zRot] = findangles(proximal, distal)
     %FINDANGLES Finds joint angles from the rotation between coordinate
     %   systems. 
     %
+    %   [yRot, xRot, zRot] = findangles(proximal, distal)
+    %
     %   INPUT =========================================================
     %
     %   proximal (structure)
@@ -29,7 +31,7 @@ function [yRot, xRot, zRot] = findangles(proximal, distal)
     %
     %   AUTHOR =========================================================
     %
-    %   S.Bahdasariants, NEL, WVU
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   ================================================================
     

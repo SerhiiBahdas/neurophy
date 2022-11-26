@@ -2,6 +2,8 @@ function [signal] = getderiv(nSignal, nT, nTNew)
     %GETDERIV resamples input signal and computes its two derivatives using
     %    cubic splite interpolation. 
     %
+    %   [signal] = getderiv(nSignal, nT, nTNew)
+    %
     %   INPUT ==========================================================
     %
     %   nSignal (numeric array)
@@ -22,7 +24,11 @@ function [signal] = getderiv(nSignal, nT, nTNew)
     %   Contains resampled positions, computed velocities and 
     %       acceelrations, and time.
     %
-    %   ================================================================   
+    %   AUTHOR =========================================================
+    %
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
+    %
+    %   ================================================================
     
     pp1  = spline(nT, nSignal); % joint angles coeffs
     pp2  = fnder(pp1,1);        % angular velocity coeffs

@@ -29,11 +29,7 @@ function nCircum = setCircum(nAge, sSex, sBody, sFile)
     %
     %   AUTHOR ============================================================
     %   
-    %   S.Bahdasariants, NEL, WVU, sb0220@mix.wvu.edu
-    %
-    %   See also MAIN, SOLVEDYNAMICS, SIMSWING, EXTRACTMETA, SAVESIM,...
-    %   GETSWING, RUNSIM, GETKIN, SCALEANTHRO, SETMECHANICS, PARAXT,...
-    %   FRUSTUMINERT
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   LITERATURE ========================================================
     %

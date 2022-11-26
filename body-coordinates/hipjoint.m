@@ -1,6 +1,5 @@
 function hipCoord = hipjoint(nLL, ias, ftc)
-    %HIPJOINT Finds distances to hip joint centers in the pelvis coordinate
-    %   system. 
+    %HIPJOINT Finds hip joint centers in the pelvis coordinate system. 
     %
     %   hipCoord = hipjoint(nLL, ias, ftc)
     %
@@ -40,7 +39,7 @@ function hipCoord = hipjoint(nLL, ias, ftc)
     %
     %   AUTHOR =========================================================
     %
-    %   S.Bahdasariants, NEL, WVU
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   ================================================================
     

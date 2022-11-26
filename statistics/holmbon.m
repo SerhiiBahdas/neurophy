@@ -33,7 +33,7 @@ function htest = holmbon(nPList, nAlpha)
 %
 %   AUTHOR ================================================================
 %   
-%   S.Bahdasariants, NEL, WVU, sb0220@mix.wvu.edu
+%   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
 %
 %   See also MULTICOMPARE RANKSUM TTEST
 %

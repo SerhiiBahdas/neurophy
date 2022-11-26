@@ -2,6 +2,8 @@ function nY = impEuler(odefun, nY0, tTime, tStep, varargin)
     % IMPEULER Solve system of ordinary differential equations using
     %   implicit Euler method. 
     %
+    %   nY = impEuler(odefun, nY0, tTime, tStep, varargin)
+    %
     %   INPUT ===========================================================
     %
     %   odefun(function)
@@ -40,7 +42,7 @@ function nY = impEuler(odefun, nY0, tTime, tStep, varargin)
     %
     %   AUTHOR ==========================================================
     %
-    %   S.Bahdasariants, NEL, WVU, serhiibahdas@gmail.com
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   =================================================================
     

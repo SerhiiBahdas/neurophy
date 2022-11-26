@@ -48,7 +48,7 @@ function [i_L, j_L, k_L, i_R, j_R, k_R] = ankleCS(fm5, fm1, uPa_L, uPa_R, uPk_L,
     %
     %   AUTHOR =========================================================
     %
-    %   S.Bahdasariants, NEL, WVU
+    %   S.Bahdasariants, NEL, WVU, https://github.com/SerhiiBahdas
     %
     %   ================================================================
     
