@@ -5,7 +5,7 @@ function nF = muscle_force_len(nX, varargin)
 %   nF = muscle_force_len(nX)
 %   nF = muscle_force_len(nX, 'bPlot', 1)
 %   nF = muscle_force_len(nX, 'bPlot', 1, 'nOptLen', 0.5,...
-%                         'sMovement', 'dynamic')
+%                         'sMovementType', 'dynamic')
 %
 %   INPUT =================================================================
 %
@@ -23,8 +23,8 @@ function nF = muscle_force_len(nX, varargin)
 %   Optimal muscle fiber length, [n.u.].
 %   Example: 0.5
 %
-%   sMovement(string)
-%   Isometric vs continuous movement force-length relationship. 
+%   sMovementType(string)
+%   Movement type. 
 %   Study [1] showed that classical isometric length-tension curves of 
 %   active wrist muscles [2] are not representative of continuous (dynamic)
 %   movements. Thus, we added option to model force-length curve with no 
@@ -42,7 +42,7 @@ function nF = muscle_force_len(nX, varargin)
 %   nF_static  = muscle_force_len(nX, 'bPLot', 1);
 %   title ('static dimensionless muscle force-length relationship');    
 %
-%   nF_dynamic = muscle_force_len(nX, 'bPlot', 1, 'sMovement', 'dynamic');
+%   nF_dynamic = muscle_force_len(nX, 'bPlot', 1, 'sMovementType', 'dynamic');
 %   title ('dynamic dimensionless muscle force-length relationship');  
 % 
 %   REFERENCES ============================================================
@@ -79,7 +79,7 @@ function nF = muscle_force_len(nX, varargin)
 %  the default optimal muscle length to be equal to 0.5 n.u. 
 
 % Choose default method for approximating force-length realtionship. 
-sMovement_default = 'static'; 
+sMovementType_default = 'static'; 
 
 % Optimal length of the muscle fiber, [n.u.]. 
 nOptLen_default = 0.5; 
@@ -101,7 +101,7 @@ p = inputParser;
 addOptional(p,'nOptLen',nOptLen_default);
 
 % Fetch the type of the movement to know which approximation to use.
-addOptional(p,'sMovement',sMovement_default);
+addOptional(p,'sMovementType',sMovementType_default);
 
 % Fetch optimal length of the muscle fiber, [n.u.].
 addOptional(p,'bPlot',bPlot_default);
@@ -127,14 +127,14 @@ end % checkBoolean
 fl_passive = @(x)(exp(2*(x-p.nOptLen))-1)/(exp(1)-1).*(x>=p.nOptLen); 
 
 % For static condition.
-if p.sMovement == "static"
+if p.sMovementType == "static"
 
     % Describe active part of the contractile component muscle force-length 
     % relationship [4,5]. 
     fl_active = @(x) exp((-(x - p.nOptLen).^2)/0.45); 
 
 % For dynamic condition.
-elseif p.sMovement == "dynamic"
+elseif p.sMovementType == "dynamic"
 
     % Describe active part of the contractile component muscle force-length 
     % relationship [1,3].
@@ -144,7 +144,7 @@ elseif p.sMovement == "dynamic"
 else
     error('Check the spelling of the movement type; options: static, dynamic');
 
-end % p.sMovement
+end % p.sMovementType
 
 % Compute force proportional to muscle length. 
 nF = fl_active(nX) + fl_passive(nX); 
