@@ -1,9 +1,11 @@
-function nF = forcevel(nV, varargin)
-%FORCEVEL Normalized force-velocity relationship describes the dependence 
-% of the maximum isometric force output on the speed of muscle contraction. 
+function nF = muscle_force_vel(nV, varargin)
+%MUSCLE_FORCE_VEL Dimensionless muscle force-velocity relationship describes
+% the dependence of the maximum isometric force output on the speed of muscle 
+% contraction. 
 %
-%   nF = forcevel(nV)
-%   nF = forcevel(nV, 'sMethod', 'Yakovenko')
+%   nF = muscle_force_vel(nV)
+%   nF = muscle_force_vel(nV, 'bPlot', 1)
+%   nF = muscle_force_vel(nV, 'bPlot', 1, 'sMethod', 'Yakovenko')
 %
 %   INPUT =================================================================
 %
@@ -12,6 +14,10 @@ function nF = forcevel(nV, varargin)
 %   Example: -[0:0.05:1]; 
 %
 %   [OPTIONAL INPUT]
+%
+%   bPlot (boolean)
+%   Visualize force-length relationship. 
+%   Example: 1
 %
 %   sMethod (string)
 %   The original Hill's approximation of the force-length relationship pro-
@@ -31,13 +37,13 @@ function nF = forcevel(nV, varargin)
 %   figure; 
 %
 %   nV = -[0:0.05:1]; 
-%   nF_Hill = forcevel(nV, 'sMethod', 'Hill');
-%   nF_Yakovenko = forcevel(nV, 'sMethod', 'Yakovenko');
+%   nF_Hill = muscle_force_vel(nV, 'sMethod', 'Hill');
+%   nF_Yakovenko = muscle_force_vel(nV, 'sMethod', 'Yakovenko');
 %   
 %   plot(nV, nF_Hill, nV, nF_Yakovenko); 
 %   legend('Hill','Yakovenko')
 %
-%   title ('dimensionless muscle force-length relationship');
+%   title ('dimensionless muscle force-velocity relationship');
 %   xlabel('contraction velocity, n.u.');
 %   ylabel('force, n.u.')
 % 
@@ -63,11 +69,14 @@ function nF = forcevel(nV, varargin)
 % Default muscle force-velocity relationship approximation method. 
 sMethod_default = 'Hill'; 
 
+% By default, do not visualize force-length relationship. 
+bPlot_default = 0; 
+
 %% FETCH INPUTS. Fetch required contraction velocity and optional input. 
 
 % Check if the input signal is numeric. 
 if ~isnumeric(nV)
-    error('Input vector is not numeric.')
+    error('Input vector must be numeric.')
 end 
 
 % Create an input parser object with default property values.
@@ -76,8 +85,16 @@ p = inputParser;
 % Fetch the name of the method used to approximate force-length (optional).
 addOptional(p,'sMethod',sMethod_default);
 
+% Fetch the name of the method used to approximate force-length (optional).
+addOptional(p,'bPlot',bPlot_default);
+
 % Parse parameters. Assign them to a structure. 
 parse(p,varargin{:}); p = p.Results; 
+
+% Check if the directive to visualize data is boolean. 
+if ~checkBoolean(p.bPlot)
+    error('Directive to visualize plot must be boolean.');
+end % checkBoolean
 
 % For Hill's approximation. 
 if p.sMethod == "Hill"
@@ -109,4 +126,30 @@ end % p.sMethod
 % Compute force. 
 nF = fv(nV); 
 
+% Plot tendon force-velocity relationship. 
+if p.bPlot == true
+
+    figure; 
+    plot(nV, nF);
+ 
+    title('dimensionless tendon force-velocity relationship');
+    xlabel('contraction velocity, n.u.');
+    ylabel('force, n.u.')
+
+end % p.bPlot 
+
 end % function
+
+%% ADDITIONAL FUNCTIONS. Add a helper function that checks if the variable 
+%  type is boolean. This function is needed to catch errors in the main 
+%  function. 
+
+function bBoolean = checkBoolean(bInput)
+
+    if (bInput == true) || (bInput == false)
+        bBoolean = 1; 
+    else
+        bBoolean = 0;
+    end % bInput
+
+end % checkBoolean
