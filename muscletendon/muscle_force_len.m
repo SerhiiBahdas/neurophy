@@ -74,7 +74,7 @@ function nF = muscle_force_len(nX, varargin)
 %
 %   =======================================================================
 
-%% SET DEFAULT VALUES. The calssical muscle force-length relationship with
+%% SET DEFAULT VALUES. The classical muscle force-length relationship with
 %  the descending limb (valid for static postures) is set as default. Opt
 %  the default optimal muscle length to be equal to 0.5 n.u. 
 
