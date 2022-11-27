@@ -1,6 +1,6 @@
 function nF = muscle_force_vel(nV, varargin)
 %MUSCLE_FORCE_VEL Dimensionless muscle force-velocity relationship describes
-% the dependence of the maximum isometric force output on the speed of muscle 
+% the dependence of the maximum force output on the speed of muscle 
 % contraction. 
 %
 %   nF = muscle_force_vel(nV)
