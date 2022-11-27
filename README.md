@@ -1,4 +1,4 @@
-# Neurophy: a toolbox for analyzing neurpohysiological data
+# Neurophy: a toolbox for analyzing neurophysiological data
 
 ###### tags: `biomechanics, emg,  musculoskeletal dynamics, body scaling, linear algebra, data extraction/visualization `
 
