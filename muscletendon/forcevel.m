@@ -1,6 +1,6 @@
 function nF = forcevel(nV, varargin)
-%FORCEVEL Force-velocity relationship describes the dependence of the
-% maximum isometric force output on the speed of muscle contraction. 
+%FORCEVEL Normalized force-velocity relationship describes the dependence 
+% of the maximum isometric force output on the speed of muscle contraction. 
 %
 %   nF = forcevel(nV)
 %   nF = forcevel(nV, 'sMethod', 'Yakovenko')
@@ -8,14 +8,14 @@ function nF = forcevel(nV, varargin)
 %   INPUT =================================================================
 %
 %   nV (numeric array)
-%   Velocity of the muscle contraction, m. 
+%   Velocity of the muscle contraction, [n.u.]. 
 %   Example: -[0:0.05:1]; 
 %
 %   [OPTIONAL INPUT]
 %
 %   sMethod (string)
 %   The original Hill's approximation of the force-length relationship pro-
-%   duces negative force at high contraction velocities that are not physi-
+%   duces negative force at high contraction velocities, which is not physi-
 %   ologically plausible [1]. We added an option to use Yakovenko's modifi-
 %   cation of the force velocity relationship [2], suitable for modeling 
 %   dynamics of the fast contraciton. 
@@ -24,7 +24,7 @@ function nF = forcevel(nV, varargin)
 %   OUTPUT ================================================================
 %
 %   nF (numeric array)
-%   Muscle force corresponding to the input contraction velocity.  
+%   Muscle force, [n.u.].  
 %
 %   EXAMPLE ===============================================================
 %
@@ -37,7 +37,7 @@ function nF = forcevel(nV, varargin)
 %   plot(nV, nF_Hill, nV, nF_Yakovenko); 
 %   legend('Hill','Yakovenko')
 %
-%   title ('normalized muscle force-length relationship');
+%   title ('dimensionless muscle force-length relationship');
 %   xlabel('contraction velocity, n.u.');
 %   ylabel('force, n.u.')
 % 
