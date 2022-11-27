@@ -1,6 +1,6 @@
 function bEqual = approxequal(nVal1, nVal2, nTol)
-%APPROXEQUAL Finds if one value is approximately equal to another value 
-% with specified tolerance.
+%APPROXEQUAL Finds if the input values are [approximately] equal 
+% with a specified tolerance.
 %
 %   bEqual = approxequal(nVal1, nVal2, nTol)
 %
