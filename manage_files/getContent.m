@@ -3,7 +3,7 @@ function sFileList = getContent(sDir,varargin)
 %   extension of the files can be specified. 
 %
 %   sFileList = getContent(sDir)
-%   sFileList = getContent(sDir, 'Extension', sFileExt)
+%   sFileList = getContent(sDir, 'sExtension', sFileExt)
 %
 %   INPUT ===========================================================
 %
@@ -14,7 +14,7 @@ function sFileList = getContent(sDir,varargin)
 %   sExtension (char, string)
 %   Specify the extension of the files you want to list in the chosen 
 %       directory. By default, function lists all folders and files.    
-%   Example: getContent(..., 'Extension', '*.mat'); 
+%   Example: getContent(..., 'sExtension', '*.mat'); 
 %
 %   OUTPUT ==========================================================
 %
@@ -32,7 +32,7 @@ function sFileList = getContent(sDir,varargin)
 %   
 %   sFileExt = '*.mat'; 
 %   sDir = "C:\Users\sb0220\Desktop"; 
-%   sFileList = getContent(sDir, 'Extension', sFileExt);
+%   sFileList = getContent(sDir, 'sExtension', sFileExt);
 %
 %   AUTHOR ==========================================================
 %
@@ -59,7 +59,7 @@ isword = @(sWord) ischar(sWord) || isstring(sWord);
 addRequired(p,'sDir',isword);
 
 % Add optional input argument to a structure and check its type
-addParameter(p, 'Extension', sDefaultExt, isword);
+addParameter(p, 'sExtension', sDefaultExt, isword);
 
 % Assign the parameters to a structure
 parse(p,sDir,varargin{:});
@@ -67,7 +67,7 @@ parse(p,sDir,varargin{:});
 %% LIST CONTENTS. Assign folder contents to the output string array.
 
 % Fetch the folders or/and files with specified extension
-contents = dir(fullfile(p.Results.sDir, p.Results.Extension));
+contents = dir(fullfile(p.Results.sDir, p.Results.sExtension));
 
 % Remove the rows containing '.' and '..' in the name column
 contents = contents(~ismember({contents(:).name}, {'.','..', '.DS_Store'}));

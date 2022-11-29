@@ -132,6 +132,7 @@ if p.sMovementType == "static"
     % Describe active part of the contractile component muscle force-length 
     % relationship [4,5]. 
     fl_active = @(x) exp((-(x - p.nOptLen).^2)/0.45); 
+    %fl_active = @(x) exp(-(-9/4*(x - 19/20*p.nOptLen)).^4 - 0.25*(-9/4*(x - 19/20*p.nOptLen)).^2);
 
 % For dynamic condition.
 elseif p.sMovementType == "dynamic"
