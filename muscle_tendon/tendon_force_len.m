@@ -25,6 +25,11 @@ function nF = tendon_force_len(nX, varargin)
 %
 %   EXAMPLE ===============================================================
 %
+%   Simple: 
+%   nX = [0:.001:0.05]; 
+%   nF = tendon_force_len(nX);
+%   
+%   Advanced: 
 %   nX = [0:.001:0.05]; 
 %   nF = tendon_force_len(nX, 'bPlot', 1);
 % 
@@ -55,7 +60,7 @@ bPlot_default = 0;
 % Create an input parser object with default property values.
 p = inputParser;
 
-% Fetch the name of the method used to approximate force-length (optional).
+% Fetch the option to visualize plot. 
 addOptional(p,'bPlot',bPlot_default);
 
 % Parse parameters. Assign them to a structure. 
