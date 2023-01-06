@@ -67,10 +67,10 @@ nPlot = length(prop);
 for iPlot = 1:nPlot 
 
     % Extract X-lables. 
-    data.("Plot" + string(iPlot)).XData = {prop(iPlot).Children.XData}; 
+    data.("Plot" + string(iPlot)).XData = {prop(nPlot+1-iPlot).Children.XData}; 
     
     % Extract Y-data.
-    data.("Plot" + string(iPlot)).YData = {prop(iPlot).Children.YData}; 
+    data.("Plot" + string(iPlot)).YData = {prop(nPlot+1-iPlot).Children.YData}; 
     
 end % iPlot
 

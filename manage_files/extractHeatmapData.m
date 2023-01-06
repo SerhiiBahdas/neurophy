@@ -63,13 +63,13 @@ nPlot = length(prop);
 for iPlot = 1:nPlot 
 
     % Extract X-lables. 
-    data.("Plot" + string(iPlot)).XData = {prop(iPlot).XData}; 
+    data.("Plot" + string(iPlot)).XData = {prop(nPlot+1-iPlot).XData}; 
     
     % Extract Y-lables.
-    data.("Plot" + string(iPlot)).YData = {prop(iPlot).YData}; 
+    data.("Plot" + string(iPlot)).YData = {prop(nPlot+1-iPlot).YData}; 
 
     % Extarct color data for the heatmap cells.
-    data.("Plot" + string(iPlot)).ColorData = {prop(iPlot).ColorData}; 
+    data.("Plot" + string(iPlot)).ColorData = {prop(nPlot+1-iPlot).ColorData}; 
     
 end % iPlot
 
