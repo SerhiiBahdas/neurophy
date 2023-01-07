@@ -10,7 +10,7 @@ function data = extractHeatmapData(varargin)
 %
 %   [OPTIONAL] 
 % 
-%   fig (object)
+%   FigureObj (object)
 %   Figure handle. See https://www.mathworks.com/help/matlab/ref/gcf.html 
 %   Example: fig = gcf
 %

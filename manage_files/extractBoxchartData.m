@@ -10,15 +10,14 @@ function data = extractBoxchartData(varargin)
 %
 %   [OPTIONAL] 
 % 
-%   fig (object)
+%   FigureObj (object)
 %   Figure handle. See https://www.mathworks.com/help/matlab/ref/gcf.html 
 %   Example: fig = gcf
 %
 %   OUTPUT ================================================================
 %
 %   data (structure)
-%   Structure containing X-lables and Y-data visualized on all boxchart(s) 
-%    in the figure. 
+%   Structure containing data visualized on all boxcharts in the figure. 
 %
 %   EXAMPLE ===============================================================
 %
