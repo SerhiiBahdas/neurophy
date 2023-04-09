@@ -1,7 +1,7 @@
 function nSig_part = extractSigPart(nSig, nRate, tLimit_min, tLimit_max)
 %EXTRACTSIGPART Extracts part of the signal from tLimit_min to tLimit_max. 
 %
-%   nSlope = noiseslope(nNoise, nRate)
+%   nSig_part = extractSigPart(nSig, nRate, tLimit_min, tLimit_max)
 %
 %   INPUT =============================================================
 %   
