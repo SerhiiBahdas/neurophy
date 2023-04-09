@@ -23,8 +23,8 @@ function nSig_part = extractSigPart(nSig, nRate, tLimit_min, tLimit_max)
 %
 %   OUTPUT ============================================================
 %   
-%   nSlope (numeric)
-%   Slope of the linear trend.
+%   nSig_part (numeric)
+%   Part of the signal.
 %
 %   AUTHOR ============================================================
 %
