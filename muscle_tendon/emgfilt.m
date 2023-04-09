@@ -140,14 +140,14 @@ nSig = nSig - mean(nSig);
 % Rectify the demeaned signal. 
 nSig = abs(nSig); 
 
-% Normalize EMG amplitude. 
-nSig = nSig./p.nMVC; 
-
 % Return the transfer function coefficients of an nth-order lowpass digital
 % Butterworth filter with normalized cutoff frequency.
 [b2,a2] = butter(p.nOrder, p.nFreq_LPC/(nRate*0.5), 'low'); 
 
-% Lowpass filter the normalized signal to create linear envelope. 
+% Lowpass filter the signal to create linear envelope. 
 nSig = filtfilt(b2,a2,nSig); 
+
+% Normalize EMG amplitude. 
+nSig = nSig./p.nMVC; 
 
 end % emgfilt
