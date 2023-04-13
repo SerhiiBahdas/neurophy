@@ -7,7 +7,7 @@ function dependencies = findDependencies(filename)
 %   
 %   filename (char array)
 %   The name of the MATLAB script file (including extension) to analyze.
-%   Example: [1,2,3,4,5,6]
+%   Example: ['denoiseEMG.m']
 %
 %   OUTPUT =================================================================
 %
