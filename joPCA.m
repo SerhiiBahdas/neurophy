@@ -180,6 +180,9 @@ for iTrialType = 1:numTrialTypes
     % Fetch data.
     nTmp = data(iTrialType).(sMatrixName);
 
+    % Center data.
+    nTmp = nTmp - mean(nTmp);
+
     % Compute number of rows.
     numRows = size(nTmp, 1);
    
@@ -201,7 +204,7 @@ X(isnan(X)) = 0;
 %% JPCA. Find scores, skew-symmetric matrix, eigenvectors, and jPCs.
 
 % Perform PCA on the input data
-[~, PCs, ~] = pca(X, 'NumComponents', numPC, 'Centered', true, 'Algorithm', 'eig');
+[~, PCs, ~] = pca(X, 'NumComponents', numPC, 'Centered', false, 'Algorithm', 'eig');
 
 % Calculate derivative of the score matrix.
 dPCs = diff(PCs, 1);
