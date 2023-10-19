@@ -40,8 +40,7 @@ function [nProj, jBasis] = jDynamics(nData, varargin)
 %   FUNCTION OPERATIONS ===================================================
 %
 %   (1) Validate and parse input parameters.
-%   (2) Ensure the data is non-negative by adding absolute of minimum negative
-%       values to respective columns.
+%   (2) Ensure the data is centered.
 %   (3) Execute PCA and derive j-Basis vectors.
 %   (4) Optionally visualize results based on input flags:
 %           a. 3D visualizations of projections on first 3 j-Basis vectors.
