@@ -46,7 +46,6 @@ function [nProj, nPC, nEVal, nVarExp] = princompan(nData, bPlot)
 %
 %   =======================================================================
 
-
 % PCA ---------------------------------------------------------------------
 
 % Computing covariance:
@@ -76,7 +75,6 @@ if bPlot
     subplot(3,1,1);
     plot((nData_centered + mean(nData, 2))');
     title('Original Signals');
-    xlabel('Sample');
     ylabel('Amplitude');
     set(gca, 'LineWidth', 1.5, 'FontSize', 12, 'Box', 'off');
     
@@ -84,7 +82,6 @@ if bPlot
     subplot(3,1,2);
     plot(nProj');
     title('Projections');
-    xlabel('Sample');
     ylabel('Amplitude');
     set(gca, 'LineWidth', 1.5, 'FontSize', 12, 'Box', 'off');
     
